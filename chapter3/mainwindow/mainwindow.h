@@ -18,7 +18,7 @@ public:
     MainWindow();
 protected:
     void closeEvent(QCloseEvent *event) override;
-private:
+private slots:
     void newFile();
     void open();
     bool save();
@@ -60,10 +60,16 @@ private:
 
     QMenu *fileMenu;
     QMenu *editMenu;
+    QMenu *selectSubMenu;
     QToolBar *fileToolBar;
     QToolBar *editToolBar;
     QAction *newAction;
     QAction *openAction;
+    QAction *saveAction;
+    QAction *saveAsAction;
+    QAction *selectAllAction;
+    QAction *showGridAction;
+    QAction *exitAction;
     QAction *aboutQtAction;
 };
 
